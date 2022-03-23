@@ -3,13 +3,15 @@
     width: 100%;
     justify-content: center;
     align-items: center;
+    height: 100px;
+    background-color: white;
 }
 
-.NavBar button {
+.NavBar .Button {
     font-size: 1.5rem;
     margin: 20px;
     background-color: transparent;
-    color: white;
+    color: rgb(53, 53, 53);
     font-weight: bold;
     border: none;
     cursor: pointer;
@@ -19,11 +21,13 @@
 
 .NavBar button:hover {
     background-color: black;
+    color: white;
 }
 
 .ImgLogo {
     padding: 5px;
     border-radius: 2rem;
+    margin-right: 10vw;
 }
 
 .dropbtn {
@@ -62,4 +66,16 @@
 
 .dropdown:hover .dropdown-content {display: block;}
 
-.dropdown:hover .dropbtn {background-color: black;} 
+.dropdown:hover .dropbtn {
+    background-color: black;
+    color: white;
+}
+
+.Login {
+    margin-left: 20vw;
+    background-color: transparent;
+    border: 1px solid black;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
