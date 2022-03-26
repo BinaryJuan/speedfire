@@ -1,0 +1,18 @@
+.CartContainer {
+    display: flex;
+    margin-left: 1vw;
+}
+
+.Counter {
+    color: black;
+    font-size: 1rem;
+    border-radius: 100%;
+    margin-top: -12px;
+    margin-left: 5px;
+    font-weight: bold;
+}
+
+.ImgCart {
+    width: 35px;
+    cursor: pointer;
+}
