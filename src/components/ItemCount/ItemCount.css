@@ -1,0 +1,60 @@
+.ItemContainer {
+    display: flex;
+    flex-direction: column;
+    width: 13vw;
+    padding: 10px 15px;
+    background-color: rgb(87, 105, 121);
+    margin: 0 auto;
+    align-items: center;
+    justify-items: center;
+}
+
+.ItemContainer div div {
+    margin: 0 20px;
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 500;
+    user-select: none;
+}
+
+.CountContainer {
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.dec {
+    background-color: white;
+    border: none;
+    width: 30px;
+    height: 30px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    border-radius: .5rem;
+}
+
+.inc {
+    background-color: white;
+    border: none;
+    width: 30px;
+    height: 30px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    border-radius: .5rem;
+}
+
+.AddCart {
+    font-size: 1.1rem;
+    width: fit-content;
+    padding: 5px 10px;
+    cursor: pointer;
+    background-color: #cc692f;
+    border: 1px solid white;
+}
+
+.AddCart:hover {
+    background-color: #b65c29;
+}
+
+.AddCart:active {
+    border-color: rgb(199, 189, 189);
+}
