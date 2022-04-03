@@ -10,7 +10,7 @@ const NavBar = () => {
                 <div className="dropdown">
                     <button className="dropbtn Button">Games</button>
                     <div className="dropdown-content">
-                        <a href="#">PC</a>
+                        <a href="#GamesPC">PC</a>
                         <a href="#">Playstation</a>
                         <a href="#">Xbox</a>
                     </div>

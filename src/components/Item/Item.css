@@ -1,0 +1,42 @@
+.ProductCard {
+    background-color: rgb(231, 231, 231);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    margin: 10px;
+    padding: 15px;
+    width: 250px;
+    user-select: none;
+}
+
+.ProductCard img {
+    border: 1px solid black;
+    width: 225px;
+    height: 250px;
+}
+
+.ProductCard h2 {
+    margin: 0;
+    font-size: 1.3rem;
+    width: auto;
+    text-align: center;
+}
+
+.ProductCard h3 {
+    margin-top: 5px;
+    font-weight: 500;
+}
+
+.Detalle {
+    background: none;
+    border: none;
+    font-size: 1rem;
+    color: rgb(190, 185, 185);
+}
+
+.Detalle:hover {
+    cursor: pointer;
+    color: rgb(151, 147, 147);
+    text-decoration: underline;
+}

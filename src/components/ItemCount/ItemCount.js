@@ -2,19 +2,19 @@ import {useState} from "react"
 import Button from "../Button/Button"
 import "./ItemCount.css"
 
-const ItemCount = ({initial, stock, onAdd}) => {
+const ItemCount = ({initial, stock, onAdd, game}) => {
     // Hooks
     const [count, setCount] = useState(initial) // utilizo la desestructuracion - count toma el valor y setCount la funcion que lo modifica
 
     // Comp. Functions
     const increment = () => {
         if (count < stock) {
-            setCount(count + 1) // le paso por parametro el nuevo valor de count
+            setCount(count + 1)
         }
     }
 
     const decrement = () => {
-        if (count > 0) {
+        if (count > 1) {
             setCount(count - 1)
         }
     }
@@ -26,7 +26,7 @@ const ItemCount = ({initial, stock, onAdd}) => {
                 <div>{count}</div>
                 <Button label={'+'} func={increment} type={'inc'} />
             </div>
-            <Button label={'Add to cart'} type={'AddCart'} func={() => {if (stock > 0 && stock >= count) {onAdd(count)}}} />
+            <Button label={'Add to cart'} type={'AddCart'} func={() => {if (stock > 1 && stock >= count) {onAdd(count, game); setCount(initial)}}} />
         </div>
     )
 }

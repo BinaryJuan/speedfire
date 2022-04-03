@@ -1,17 +1,15 @@
 .ItemContainer {
     display: flex;
     flex-direction: column;
-    width: 13vw;
-    padding: 10px 15px;
-    background-color: rgb(87, 105, 121);
-    margin: 0 auto;
+    width: 100%;
     align-items: center;
     justify-items: center;
+    margin-top: 30px;
 }
 
 .ItemContainer div div {
     margin: 0 20px;
-    color: white;
+    color: black;
     font-size: 1.5rem;
     font-weight: 500;
     user-select: none;
@@ -43,18 +41,27 @@
 }
 
 .AddCart {
+    color: white;
     font-size: 1.1rem;
     width: fit-content;
     padding: 5px 10px;
     cursor: pointer;
-    background-color: #cc692f;
-    border: 1px solid white;
+    background-color: #282c34;
+    border: none;
 }
 
 .AddCart:hover {
-    background-color: #b65c29;
+    background-color: #454c5c;
 }
 
 .AddCart:active {
     border-color: rgb(199, 189, 189);
+}
+
+.inc:hover {
+    border: 1px solid black;
+}
+
+.dec:hover {
+    border: 1px solid black;
 }
