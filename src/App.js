@@ -8,7 +8,9 @@ const App = () => {
       <header className="App-header">
         <NavBar />
       </header>
-      <ItemListContainer id="GamesPC" greeting={'PC Games'} filter={'PC'} />
+      <ItemListContainer id="GamesPC" greeting={'PC'} filter={'PC'} />
+      <ItemListContainer id="GamesPS" greeting={'Playstation'} filter={'PS'} />
+      <ItemListContainer id="GamesXBOX" greeting={'XBOX'} filter={'XBOX'} />
     </div>
   );
 }
