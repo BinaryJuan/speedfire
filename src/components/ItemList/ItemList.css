@@ -4,3 +4,10 @@
     justify-content: center;
     padding: 20px;
 }
+
+.CategoryTitle {
+    font-size: 1.7rem;
+    color: white;
+    text-align: center;
+    margin-top: 200px;
+}

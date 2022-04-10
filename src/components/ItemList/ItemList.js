@@ -1,15 +1,15 @@
-import Item from "../Item/Item.js"
-import "./ItemList.css"
+import Item from '../Item/Item.js'
+import './ItemList.css'
 
-const ItemList = ({products, filter}) => {
-
+const ItemList = ({products, category}) => {
     return (
-        <div className="ItemList">
-            {products.map(prod => {
-                if (prod.category == filter) {
+        <div>
+            <h2 className='CategoryTitle'>Games: {category.toUpperCase()}</h2>
+            <div className='ItemList'>
+                {products.map(prod => {
                     return <Item key={prod.id} {...prod} /> 
-                }
-            })}
+                })}
+            </div>
         </div>
     )
 }

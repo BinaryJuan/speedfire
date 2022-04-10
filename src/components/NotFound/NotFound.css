@@ -1,0 +1,14 @@
+.NotFound {
+    font-size: 2rem;
+    color: white;
+    margin-top: 200px;
+    text-align: center;
+}
+
+.ImgNotFound {
+    margin: 0 auto;
+    display: block;
+    width: 900px;
+    border-radius: 2rem;
+    user-select: none;
+}

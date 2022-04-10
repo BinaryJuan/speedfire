@@ -1,0 +1,36 @@
+.DetailCard {
+    display: flex;
+    width: max-content;
+    margin: 200px auto 0 auto;
+    background-color: #e7e7e7;
+    padding: 50px;
+}
+
+.DetailText {
+    color: black;
+    font-size: 1.3rem;
+    list-style: none;
+}
+
+.Title {
+    font-weight: bold;
+}
+
+.DetailImg {
+    width: 500px;
+    height: 580px;
+}
+
+.BuyButton {
+    margin: 375px 0 0 40px;
+    background-color: #cc692f;
+    border: 1px solid black;
+    font-size: 1.6rem;
+    padding: 10px;
+    border-radius: .2rem;
+    cursor: pointer;
+}
+
+.BuyButton:active {
+    background-color: #b45a26;
+}

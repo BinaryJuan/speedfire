@@ -7,7 +7,7 @@
     color: black;
     font-size: 1rem;
     border-radius: 100%;
-    margin-top: -12px;
+    margin-top: -8px;
     margin-left: 5px;
     font-weight: bold;
     user-select: none;
@@ -15,5 +15,7 @@
 
 .ImgCart {
     width: 35px;
+    height: 35px;
     cursor: pointer;
+    margin-top: 5px;
 }

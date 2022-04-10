@@ -1,12 +1,10 @@
-import {useState} from "react"
-import Button from "../Button/Button"
-import "./ItemCount.css"
+import {useState} from 'react'
+import Button from '../Button/Button'
+import './ItemCount.css'
 
 const ItemCount = ({initial, stock, onAdd, game}) => {
-    // Hooks
-    const [count, setCount] = useState(initial) // utilizo la desestructuracion - count toma el valor y setCount la funcion que lo modifica
+    const [count, setCount] = useState(initial)
 
-    // Comp. Functions
     const increment = () => {
         if (count < stock) {
             setCount(count + 1)
@@ -20,8 +18,8 @@ const ItemCount = ({initial, stock, onAdd, game}) => {
     }
 
     return (
-        <div className="ItemContainer">
-            <div className="CountContainer">
+        <div className='ItemContainer'>
+            <div className='CountContainer'>
                 <Button label={'-'} func={decrement} type={'dec'} />
                 <div>{count}</div>
                 <Button label={'+'} func={increment} type={'inc'} />
