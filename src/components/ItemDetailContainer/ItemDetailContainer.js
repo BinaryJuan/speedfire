@@ -3,6 +3,8 @@ import { useState, useEffect } from 'react'
 import { getProductsById } from '../ItemListContainer/asyncmock.js'
 import ItemDetail from '../ItemDetail/ItemDetail.js'
 import { useParams } from 'react-router-dom'
+import NotFound from '../NotFound/NotFound'
+import Loading from '../Loading/Loading'
 
 const ItemDetailContainer = () => {
     const [product, setProduct] = useState()
@@ -28,8 +30,8 @@ const ItemDetailContainer = () => {
     return (
         <div className='ItemDetailContainer' >
             { 
-                loading ? <h2 className='NoProduct'>Loading...</h2> :
-                product ? <ItemDetail  {...product} /> : <h2 className='NoProduct'>Oops! The product doesn't exist. Sorry.</h2> 
+                loading ? <h2 className='NoProduct'><Loading /></h2> :
+                product ? <ItemDetail  {...product} /> : <NotFound message='Oops! The product does not exist. Sorry.' />
             }
         </div>
     )    

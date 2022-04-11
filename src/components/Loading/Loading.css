@@ -1,0 +1,14 @@
+.LoadingContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 200px auto 0 auto;
+    color: white;
+}
+
+.ImageLoading {
+    width: 300px;
+    height: 200px;
+    margin-left: -130px;
+}

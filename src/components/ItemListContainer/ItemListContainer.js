@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react'
 import { getProducts } from './asyncmock.js'
 import ItemList from '../ItemList/ItemList.js'
 import { useParams } from 'react-router-dom'
+import NotFound from '../NotFound/NotFound'
 
 const ItemListContainer = (props) => {
     const [products, setProducts] = useState([])
@@ -18,7 +19,7 @@ const ItemListContainer = (props) => {
 
     return (
         <div id={props.id} className='ItemListContainer'>
-            <ItemList products={products} category={categoryID} />
+            {products.length > 0 ? <ItemList products={products} category={categoryID} /> : <NotFound message='That category does not exist' />}
         </div>
     )
 }
