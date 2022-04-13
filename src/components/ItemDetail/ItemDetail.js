@@ -1,9 +1,14 @@
 import './ItemDetail.css'
-import Button from '../Button/Button'
+import { useState } from 'react'
+import { Link } from 'react-router-dom'
+import ItemCount from '../ItemCount/ItemCount'
 
 const ItemDetail = ({ img, description, id, category, price, currency }) => {
-    const onAddSingle = () => {
-        console.log(`x1 "${description}" added (price: $${price})`)
+    const [quantity, setQuantity] = useState(0)
+
+    const onAddItem = (count) => {
+        setQuantity(count)
+        console.log(`x${count} "${description}" added (price: $${price})`)
     }
 
     return (
@@ -18,7 +23,9 @@ const ItemDetail = ({ img, description, id, category, price, currency }) => {
                     <li className='DetailText'><span className='Title'>Category: </span><span className='CategoryColor'>{category.toUpperCase()}</span></li>
                     <li className='DetailText'><span className='Title'>Price: </span>{price}{currency}</li>
                 </ul>
-                <Button type='BuyButton' func={onAddSingle} label='Buy now' />
+                <div className='Flex'>
+                    {quantity > 0 ? <Link to='/cart' className='ToCart'>Go to cart</Link> : <ItemCount className='ItemContainer' initial={1} onAdd={onAddItem} stock={20}  game={description} />}
+                </div>
             </div>
         </div>
     )

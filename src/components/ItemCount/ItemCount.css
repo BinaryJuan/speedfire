@@ -1,7 +1,7 @@
 .ItemContainer {
     display: flex;
     flex-direction: column;
-    width: 100%;
+    width: auto;
     align-items: center;
     justify-items: center;
     margin-top: 30px;

@@ -6,6 +6,10 @@
     padding: 50px;
 }
 
+.DetailTextContainer ul {
+    margin-bottom: 270px;
+}
+
 .DetailText {
     color: black;
     font-size: 1.3rem;
@@ -21,16 +25,28 @@
     height: 580px;
 }
 
-.BuyButton {
-    margin: 375px 0 0 40px;
+.ToCart:hover {
+    background-color: #b45a26;
+}
+
+.ToCart {
+    text-decoration: none;
     background-color: #cc692f;
     border: 1px solid black;
     font-size: 1.6rem;
+    width: 130px;
+    text-align: center;
+    height: 40px;
     padding: 10px;
     border-radius: .2rem;
     cursor: pointer;
+    color: black;
+    margin-top: 20px;
 }
 
-.BuyButton:active {
-    background-color: #b45a26;
+.Flex {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 2vw;
 }
