@@ -1,14 +1,19 @@
 import './ItemDetail.css'
-import { useState } from 'react'
+import { useState, useContext } from 'react'
 import { Link } from 'react-router-dom'
 import ItemCount from '../ItemCount/ItemCount'
+import CartContext from '../../context/CartContext'
 
 const ItemDetail = ({ img, description, id, category, price, currency }) => {
     const [quantity, setQuantity] = useState(0)
+    const {addItemToCart} = useContext(CartContext)
 
     const onAddItem = (count) => {
         setQuantity(count)
-        console.log(`x${count} "${description}" added (price: $${price})`)
+        const productIn = {
+            id, description, currency, price, count, img, finalProductPrice: price * count
+        }
+        addItemToCart(productIn)
     }
 
     return (
@@ -24,7 +29,7 @@ const ItemDetail = ({ img, description, id, category, price, currency }) => {
                     <li className='DetailText'><span className='Title'>Price: </span>{price}{currency}</li>
                 </ul>
                 <div className='Flex'>
-                    {quantity > 0 ? <Link to='/cart' className='ToCart'>Go to cart</Link> : <ItemCount className='ItemContainer' initial={1} onAdd={onAddItem} stock={20}  game={description} />}
+                    {quantity > 0 ? <Link to='/cart' className='ToCart'>Go to cart</Link> : <ItemCount className='ItemContainer' initial={1} onAdd={onAddItem} stock={20} game={description} />}
                 </div>
             </div>
         </div>

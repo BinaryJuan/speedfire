@@ -6,7 +6,7 @@ import { useParams } from 'react-router-dom'
 import NotFound from '../NotFound/NotFound'
 import Loading from '../Loading/Loading'
 
-const ItemDetailContainer = () => {
+const ItemDetailContainer = ({ addToCart, cart }) => {
     const [product, setProduct] = useState()
     const [loading, setLoading] = useState(true)
     const { productID } = useParams()
@@ -31,7 +31,7 @@ const ItemDetailContainer = () => {
         <div className='ItemDetailContainer' >
             { 
                 loading ? <h2 className='NoProduct'><Loading /></h2> :
-                product ? <ItemDetail  {...product} /> : <NotFound message='Oops! The product does not exist. Sorry.' />
+                product ? <ItemDetail  {...product} addToCart={addToCart} cart={cart} /> : <NotFound message='Oops! The product does not exist. Sorry.' />
             }
         </div>
     )    

@@ -2,3 +2,19 @@ html {
   background-color: #282c34;
   scroll-behavior: smooth;
 }
+
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey; 
+}
+
+::-webkit-scrollbar-thumb {
+  background: #ffffff; 
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #c7c7c7; 
+}
