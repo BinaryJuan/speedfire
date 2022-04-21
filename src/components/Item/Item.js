@@ -16,7 +16,7 @@ const Item = ({img, description, price, currency, id}) => {
             </picture>
             <h2>{description}</h2>
             <h3>{price}{currency}</h3>
-            <Link to={`/item/${id}`} className='Detalle'>Ver detalle</Link>
+            <Link to={`/item/${id}`} className='Detalle'>See details</Link>
             <ItemCount initial={1} stock={20} onAdd={handleOnAdd} game={description} />
         </div>
     )

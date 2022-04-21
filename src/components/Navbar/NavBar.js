@@ -1,8 +1,21 @@
 import './NavBar.css'
 import CartWidget from '../CartWidget/CartWidget'
 import { Link, NavLink } from 'react-router-dom'
+import { firestoreDb } from '../../services/firebase'
+import { getDocs, collection, query } from 'firebase/firestore'
+import { useEffect, useState } from 'react'
 
 const NavBar = () => {
+    const [categories, setCategories] = useState([])
+    useEffect(() => {
+        getDocs(query(collection(firestoreDb, 'categories'))).then(response => {
+            const categories = response.docs.map(doc => {
+            return { id: doc.id, ...doc.data()}
+            })
+            setCategories(categories)
+        })
+    }, [])
+
     return (
         <nav className='NavBar'>
             <Link to='/'>
@@ -14,9 +27,8 @@ const NavBar = () => {
                 <div className='dropdown'>
                     <NavLink to='/games/all' className={({isActive}) => isActive ? 'activeButton dropbtn' : 'Button dropbtn'}>Games</NavLink>
                     <div className='dropdown-content'>
-                        <Link to='/games/pc'>PC</Link>
-                        <Link to='/games/ps'>PlayStation</Link>
-                        <Link to='/games/xbox'>Xbox</Link>
+                        { categories.map(cat => <Link key={cat.id} to={`/games/${cat.id}`}
+                    >   {(cat.description).toUpperCase()}</Link>)}
                     </div>
                 </div> 
                 <NavLink to='/contact' className={({isActive}) => isActive ? 'activeButton' : 'Button'}>Contact</NavLink>

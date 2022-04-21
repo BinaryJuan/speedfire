@@ -11,7 +11,6 @@ export const CartContextProvider = ({children}) => {
         cart = cart.map((prod) => {
             if (productAdd.id == prod.id) {
                 modified = true
-                console.log('modifique')
                 return {...prod, count: prod.count + productAdd.count}
             }
             else {
