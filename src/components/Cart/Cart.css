@@ -59,9 +59,27 @@
     cursor: pointer;
 }
 
+.QuantityOperators {
+    color: white;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    border-radius: .6rem;
+    cursor: pointer;
+    margin: 10px;
+    font-size: 1.5rem;
+    background-color: black;
+    user-select: none;
+}
+
+.QuantityOperators:hover {
+    background-color: rgb(36, 32, 32);
+}
+
 .ProductTotalPrice {
     color: white;
     font-size: 1.4rem;
+    margin-left: 50px;
     margin-right: 20px;
 }
 
@@ -71,20 +89,47 @@
     font-size: 1.7rem;
 }
 
-.ClearCart {
+.CartButtons {
     text-align: center;
-    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.ClearCart button {
+.CartButtons button {
+    margin: 10px;
+}
+
+.Clear {
     font-size: 1.4rem;
-    background-color: rgb(224, 51, 51);
-    border: none;
     cursor: pointer;
+    border: 1px solid #969696;
+    background-color: transparent;
+    border-radius: .5rem;
+    padding: 10px;
+    color: white;
+    height: 52px;
+    border: 1px solid rgb(177, 22, 22);
 }
 
-.ClearCart button:active {
-    background-color: rgb(150, 19, 19);
+.CartButtons .Clear:hover {
+    background-color: rgb(177, 22, 22);
+}
+
+.CreateOrder {
+    font-size: 1.4rem;
+    cursor: pointer;
+    border: 1px solid #969696;
+    background-color: transparent;
+    border-radius: .5rem;
+    padding: 10px;
+    color: white;
+    text-decoration: none;
+}
+
+.CreateOrder:hover {
+    background-color: white;
+    color:  black;
 }
 
 .AddProductsLink {

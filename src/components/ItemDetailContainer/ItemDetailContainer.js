@@ -9,19 +9,22 @@ import { getDoc, doc } from 'firebase/firestore'
 
 const ItemDetailContainer = ({ addToCart, cart }) => {
     const [product, setProduct] = useState()
-    const [loading, setLoading] = useState(false)
+    const [loading, setLoading] = useState(true)
     const { productID } = useParams()
 
     useEffect(() => {
-        getDoc(doc(firestoreDb, 'products', productID)).then(response => {
+        getDoc(doc(firestoreDb, 'products', productID))
+        .then(response => {
             const productSingular = { id: response.id, ...response.data() }
             setProduct(productSingular)
+        })
+        .finally(() => {
+            setLoading(false)
         })
         return (() => {
             setProduct()
         })
     }, [productID])
-
 
     return (
         <div className='ItemDetailContainer' >

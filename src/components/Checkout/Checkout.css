@@ -1,0 +1,152 @@
+.wrapper {
+    margin-top: 5%;
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    -webkit-box-shadow: 9px 13px 25px 0px rgba(0, 0, 0, 0.18);
+    -moz-box-shadow: 9px 13px 25px 0px rgba(0, 0, 0, 0.18);
+    box-shadow: 9px 13px 25px 0px rgba(0, 0, 0, 0.18);
+    color: white;
+    margin: 200px auto;
+    border: 1px solid white;
+    border-radius: .5rem;
+}
+
+.btns {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.Error {
+    margin-top: 400px;
+    text-align: center;
+    color: white;
+    font-size: 1.7rem;
+}
+
+.ButtonForm {
+    margin: 3px 0;
+    height: 30px;
+    width: 40%;
+    color: white;
+    background-color: #260f6b;
+    text-transform: uppercase;
+    border: 0;
+    border-radius: .3rem;
+    letter-spacing: 2px;
+    cursor: pointer;
+    text-decoration: none;
+    text-align: center;
+    padding-top: 3px;
+}
+
+.ButtonForm:hover {
+    background-color: #391999;
+}
+
+.container {
+    width: 65%;
+    padding: 5% 10%;
+}
+
+h1 {
+    align-self: center;
+}
+
+input {
+    width: 100%;
+    min-height: 25px;
+    border: 0;
+    font-size: 1rem;
+    letter-spacing: .15rem;
+    font-family: "Arimo";
+    margin-top: 5px;
+    border-radius: 4px;
+    margin-bottom: 20px;
+}
+
+label {
+    text-transform: uppercase;
+    font-size: 12px;
+    letter-spacing: 2px;
+}
+
+h1 {
+    font-size: 24px;
+    line-height: 10px;
+    letter-spacing: 1px;
+}
+
+h1:nth-of-type(2) {
+    margin-top: 10%;
+}
+
+form {
+    width: 100%;
+}
+
+.name {
+    justify-content: space-between;
+    display: flex;
+    width: 100%;
+}
+
+.address-info {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.cc-info {
+    display: flex;
+    justify-content: space-between;
+}
+
+input:focus,
+button:focus {
+    outline: none;
+}
+
+@media (max-width: 736px) {
+    .wrapper {
+        width: 100%;
+    }
+
+    .container {
+        width: 100%;
+    }
+
+    .btns {
+        align-items: center;
+    }
+
+    form h1 {
+        text-align: center;
+    }
+
+    div {
+        align-items: center;
+        flex-direction: column;
+        width: 100%;
+        display: flex;
+    }
+
+    .name,
+    .address-info,
+    .cc-info {
+        flex-direction: column;
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .street,
+    .cc-num {
+        text-align: center;
+    }
+
+    input {
+        margin: 5px 0;
+        min-height: 30px;
+    }
+}

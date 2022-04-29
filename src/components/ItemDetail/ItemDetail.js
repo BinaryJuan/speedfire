@@ -11,7 +11,7 @@ const ItemDetail = ({ img, description, id, category, price, currency }) => {
     const onAddItem = (count) => {
         setQuantity(count)
         const productIn = {
-            id, description, currency, price, count, img, finalProductPrice: price * count
+            id, description, currency, price, count, img, finalProductPrice: price * count, stock: 20
         }
         addItemToCart(productIn)
     }

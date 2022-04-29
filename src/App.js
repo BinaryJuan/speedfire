@@ -6,6 +6,7 @@ import NotFound from './components/NotFound/NotFound'
 import ExampleText from './components/ExampleText/ExampleText'
 import Us from './components/Us/Us'
 import Cart from './components/Cart/Cart'
+import Checkout from './components/Checkout/Checkout'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import { CartContextProvider } from './context/CartContext'
 
@@ -23,6 +24,7 @@ const App = () => {
               <Route path='/item/:productID' element={<ItemDetailContainer />} />
               <Route path='/contact' element={<ExampleText />} />
               <Route path='/cart' element={<Cart />} />
+              <Route path='/checkout' element={<Checkout />}></Route>
               <Route path='*' element={<NotFound message={'Page not found :('} />} />
             </Routes>
           </BrowserRouter>
