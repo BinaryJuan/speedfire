@@ -1,5 +1,4 @@
 ![Speedfire Image](https://i.ibb.co/MsQtK0G/speedfire.png)
-*Curso React de Coderhouse / e-commerce*
 - **Nombre del e-commerce**: Speedfire
 - **Autor**: Dante Terranova
 - **Año**: 2022
@@ -7,7 +6,7 @@
 ## Índice
 [TOC]
 
-## Introducción :fa-gamepad:
+## Introducción :electric_plug:
 Este proyecto buscó concretar un e-commerce convencional de videojuegos, que cuenta con un listado filtrado por categoría, dando la posibilidad de ver el detalle de cada producto. Además de esto, el e-commerce provee la posibilidad de interactuar con los productos, ya sea para agregarlos al carrito, modificar su cantidad al agregar y una vez agregados, eliminarlos del carrito, entre otras.
 
 ## Tecnologías usadas :fa-magic:
