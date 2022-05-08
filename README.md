@@ -6,14 +6,14 @@
 ## Índice
 [TOC]
 
-## Introducción :electric_plug:
+## Introducción :video_game:
 Este proyecto buscó concretar un e-commerce convencional de videojuegos, que cuenta con un listado filtrado por categoría, dando la posibilidad de ver el detalle de cada producto. Además de esto, el e-commerce provee la posibilidad de interactuar con los productos, ya sea para agregarlos al carrito, modificar su cantidad al agregar y una vez agregados, eliminarlos del carrito, entre otras.
 
-## Tecnologías usadas :fa-magic:
+## Tecnologías usadas :computer:
 **Principales**
 	React, Node, ReactRouter, Firebase
 
-## Implementación de las tecnologías :fa-keyboard-o:
+## Implementación de las tecnologías :mag_right:
 #### React
 Tecnología tronco para desarrollar este proyecto. Desglosado en:
 - **useEffect**: para ejecutar código cada vez que nuestro componente se renderiza o actualiza.
@@ -45,7 +45,7 @@ Usada como base de datos. Permite importar los productos, las categorías, y alm
 - Sweet alert
 - Toastify
 
-## Instalación :fa-gavel:
+## Instalación :electric_plug:
 Para la instalación de este proyecto se deberán seguir los pasos a continuación:
 
 ** Requisitos:**
@@ -71,7 +71,7 @@ Para la instalación de este proyecto se deberán seguir los pasos a continuaci�
 	De esta manera se instalarán todas las dependencias para que el proyecto funcione 
 	de manera óptima.
 
-## Funcionamiento :fa-laptop:
+## Funcionamiento :fireworks:
 **Descripción de las páginas principales:**
 - **Home**: página de inicio en donde se puede acceder a las diferentes secciones del sitio web.
 - **Us**: página en donde se dará una descripción breve de la historia del comercio.
@@ -98,7 +98,7 @@ Una vez ingresados los datos se debe tocar el botón de finalizar compra y, en c
 https://ibb.co/1fLGjq9
 
 
-## Ejecución :fa-rocket:
+## Ejecución :rocket:
 1. Ejecutar el proyecto de manera local
 `npm start`
 
