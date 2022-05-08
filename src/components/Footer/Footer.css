@@ -1,0 +1,85 @@
+.FooterContainer {
+    background-color: rgb(1, 2, 17);
+    height: 350px;
+    width: 100%;
+    position: relative;
+    margin-top: 150px;
+}
+
+.container-footer {  
+    display: grid;
+    height: 80%;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 0.1fr 0.7fr;
+    grid-auto-columns: 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    padding-top: 40px;
+    padding-left: 10vw;
+    color: rgb(224, 224, 224);
+}
+
+.container-footer div {
+    width: 100%;
+}
+
+.titles {
+    font-size: 1.2rem;
+    font-weight: 600;
+    text-align: left;
+}
+
+.FooterNavbar {
+    list-style: none;
+    margin: -1px 0 0 0;
+    padding: 0;
+}
+
+.description {
+    margin-top: 10px;
+}
+
+.FooterNavbar li a {
+    text-decoration: none;
+    color: rgb(224, 224, 224);
+}
+
+.FooterNavbar li a:hover {
+    font-weight: 500;
+    color: white;
+}
+
+.Copyright {
+    text-align: center;
+    margin-top: -30px;
+    color: white;
+}
+
+.nWidth {
+    width: 70% !important;
+}
+
+.dflex {
+    display: flex;
+}
+
+.dflex div {
+    width: fit-content;
+    margin-top: 10px;
+    margin-right: 40px;
+}
+
+.FooterImg {
+    width: 50px;
+    cursor: pointer;
+}
+
+@media (max-width: 1264px)  {
+    .container-footer {
+        display: flex;
+    }
+
+    .titles, .nWidth {
+        display: none;
+    }
+}

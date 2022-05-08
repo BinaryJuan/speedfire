@@ -3,6 +3,7 @@ import { useState, useContext } from 'react'
 import { Link } from 'react-router-dom'
 import ItemCount from '../ItemCount/ItemCount'
 import CartContext from '../../context/CartContext'
+import notifyAdd from '../Notification/Notification'
 
 const ItemDetail = ({ img, description, id, category, price, currency }) => {
     const [quantity, setQuantity] = useState(0)
@@ -14,6 +15,7 @@ const ItemDetail = ({ img, description, id, category, price, currency }) => {
             id, description, currency, price, count, img, finalProductPrice: price * count, stock: 20
         }
         addItemToCart(productIn)
+        notifyAdd(description)
     }
 
     return (

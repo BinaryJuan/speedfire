@@ -1,0 +1,65 @@
+*, *::after, *::before {
+    margin: 0;
+    padding: 0;
+}
+
+.faqContainer {
+    margin-top: 200px;
+    padding: 50px;
+}
+
+div.c {
+    position: relative;
+    margin-bottom: 80px;
+}
+
+.input-faq {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    visibility: 0;
+}
+
+.h1-faq {
+    background: rgb(2, 21, 37);
+    color: white;
+    height: auto;
+    position: relative;
+}
+
+.label-faq {
+    cursor: pointer;
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: auto;
+    padding-left: 2vw;
+    font-weight: 100;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+div.p {
+    max-height: 0px;
+    overflow: hidden;
+    transition: all 0.75s;
+    background-color: white;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+    margin-top: -30px;
+    padding-top: 15px;
+}
+
+div.p p {
+    padding: 2em;
+}
+
+.input-faq:checked ~ h2 ~ div.p {
+    max-height: 300px;
+}
+
+@media (max-width: 670px) {
+
+}

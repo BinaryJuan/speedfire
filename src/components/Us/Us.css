@@ -6,27 +6,44 @@
 
 .UsContainer img {
     width: 100%;
-    max-width: 700px;
     height: auto;
-    margin-left: 8vw;
+    text-align: center;
+    margin-top: 30px;
 }
 
 .FlexContainer {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-bottom: 80px;
 }
 
 .TextContainer {
-    width: min-content;
+    width: 40%;
+    height: auto;
 }
 
 .TextContainer h2 {
     color: white;
     font-size: 2rem;
+    margin-bottom: 20px;
 }
 
 .TextContainer p {
     color: white;
     font-size: 1.5rem;
+}
+
+@media (max-width: 1024px) {
+    .FlexContainer {
+        width: 100%;
+    }
+
+    .TextContainer {
+        width: 80%;
+    }
+
+    .UsContainer {
+        margin-top: 150px;
+    }
 }

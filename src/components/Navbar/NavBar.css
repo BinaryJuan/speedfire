@@ -11,6 +11,7 @@
     margin-bottom: 100px;
     position: fixed;
     top: 0;
+    z-index: 999;
 }
 
 .NavBar .Button {
@@ -97,15 +98,14 @@
     background-color: rgb(54, 54, 54);
 }
 
-.FlexLog {
-    display: flex;
-    padding: 25px;
-}
-
 .ButtonsContainer {
     margin-left: -5vw;
     display: flex;
     
+}
+
+.CartNav {
+    padding: 25px;
 }
 
 .activeButton {
@@ -119,4 +119,14 @@
     height: max-content;
     padding: 10px;
     text-decoration: none;
+}
+
+@media (max-width: 1024px) {
+    .NavBar {
+        display: none;
+    }
+
+    .HomeContainer {
+        margin-top: 0;
+    }
 }

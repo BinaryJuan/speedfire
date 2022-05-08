@@ -1,70 +1,108 @@
-# Getting Started with Create React App
+![Speedfire Image](https://i.ibb.co/MsQtK0G/speedfire.png)
+*Curso React de Coderhouse / e-commerce*
+- **Nombre del e-commerce**: Speedfire
+- **Autor**: Dante Terranova
+- **Año**: 2022
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Índice
+[TOC]
 
-## Available Scripts
+## Introducción :fa-gamepad:
+Este proyecto buscó concretar un e-commerce convencional de videojuegos, que cuenta con un listado filtrado por categoría, dando la posibilidad de ver el detalle de cada producto. Además de esto, el e-commerce provee la posibilidad de interactuar con los productos, ya sea para agregarlos al carrito, modificar su cantidad al agregar y una vez agregados, eliminarlos del carrito, entre otras.
 
-In the project directory, you can run:
+## Tecnologías usadas :fa-magic:
+**Principales**
+	React, Node, ReactRouter, Firebase
 
-### `npm start`
+## Implementación de las tecnologías :fa-keyboard-o:
+#### React
+Tecnología tronco para desarrollar este proyecto. Desglosado en:
+- **useEffect**: para ejecutar código cada vez que nuestro componente se renderiza o actualiza.
+- **useState**: para poder crear estados y asignarles valores.
+- **useContext**: para poder generar una relación entre un componente y otro, y así compartirse funciones y datos.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+#### Node
+Entorno de ejecución de JavaScript utilizado para desarrollar el proyecto, que ayuda a  instalar y desinstalar paquetes, gestionar versiones y gestionar dependencias necesarias para ejecutar el proyecto.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+#### ReactRouter
+Genera la posibilidad de navegar entre distintas rutas y poder actuar según las mismas. Por ejemplo, cuando se filtran las categorías.
+- **useParams**: usado para obtener la ruta actual y a través de la ruta actual filtrar los resultados de la categoría.
+- **Routes**: tag usada para contener todas las tags "Route".
+- **Route**: definir qué componente mostrar cuando una URL está activa. En algunos casos, la URL puede variar, utilizando (:variable) para indicarlo. Esto, además del useParams, nos permite hacer un filtrado.
+- **Link**: se crea una referencia hacia una URL indicada. Por ende, cuando se presiona sobre ésta, se irá a esa URL.
+- **NavLink**: similar a Link, pero con la ventaja de que se le pueden asignar clases en los dos casos posibles (si está o no activa).
 
-### `npm test`
+#### Firebase
+Usada como base de datos. Permite importar los productos, las categorías, y almacenar las órdenes generadas desde el e-commerce.
+- collection
+- doc
+- getDocs
+- getDoc
+- query
+- where
+- getFirestore
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+#### Librerías adicionales utilizadas
+- Sweet alert
+- Toastify
 
-### `npm run build`
+## Instalación :fa-gavel:
+Para la instalación de este proyecto se deberán seguir los pasos a continuación:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+** Requisitos:**
+- Tener Node instalado
+- Tener a disposición un CLI
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+**Instalación:**
+1. Clonar repositorio
+`git clone https://github.com/BinaryJuan/speedfire.git`
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+	A traves de la CLI, acceder a la carpeta de clonación deseada, luego copiar el link
+	y finalmente pegarlo en la CLI y ejecutarlo.
 
-### `npm run eject`
+2.  Inicializar NPM
+`npm init -y`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+	Parado en la misma carpeta que antes, ejecutar este comando para inicializar
+	NPM y el proyecto. Esto permitirá instalar todas las dependencias del proyecto.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+3. Instalar librerias y dependencias
+`npm install`
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+	De esta manera se instalarán todas las dependencias para que el proyecto funcione 
+	de manera óptima.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Funcionamiento :fa-laptop:
+**Descripción de las páginas principales:**
+- **Home**: página de inicio en donde se puede acceder a las diferentes secciones del sitio web.
+- **Us**: página en donde se dará una descripción breve de la historia del comercio.
+- **Games (y sub-secciones)**: páginas en donde se podrán ver los productos (videojuegos), ser seleccionados en el carrito, y elegir su cantidad.
+- **Help**: página de soporte estándar y ficticia.
+- **Cart**: página en donde encontrar los productos agregados al carrito y la posibilidad de modificarlos.
+- **Checkout**: página en donde, después de tener productos en el carrito, se procede a ingresar los datos para la entrega de los productos (los métodos de pago son de decoración).
 
-## Learn More
+**Descripción del agregado de un producto:**
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Para empezar, se debe ir a la sección "Games"para ingresar el o los juegos deseados, especificando su cantidad a través del contador (componente Counter). Una vez finalizado el ingreso de los productos al carrito, se debe ir al mismo.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Para acceder al carrito existen dos maneras: una desde el navbar y la otra al agregar un producto desde el detalle del mismo.
 
-### Code Splitting
+Ya una vez en el carrito se podrá modificar tanto la cantidad de cada producto, como ejecutar su eliminación y limpiar todo el carrito si así se desea. Luego está la opción de finalizar la compra, en donde se le trasladará a la sección "Checkout"y podrá ingresar sus datos. Los campos obligatorios se moverán y quedarán en rojo hasta que se les ingrese un valor válido.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Una vez ingresados los datos se debe tocar el botón de finalizar compra y, en caso de haber stock, se generará una orden con los datos ingresados en el formulario.
 
-### Analyzing the Bundle Size
+**Ejemplo de orden generada luego de una compra**
+![Orden](https://i.ibb.co/cXvtrGq/order.png)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+**Video mostrando el proceso completo de compra:**
 
-### Making a Progressive Web App
+https://ibb.co/1fLGjq9
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
 
-### Advanced Configuration
+## Ejecución :fa-rocket:
+1. Ejecutar el proyecto de manera local
+`npm start`
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+	A través de este comando generaremos un servidor virtual local para simular
+	el e-commerce. Automáticamente se debería abrir una ventana con la siguiente URL
+	http://localhost:3000/.

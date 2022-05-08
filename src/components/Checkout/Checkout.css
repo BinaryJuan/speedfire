@@ -19,7 +19,7 @@
 }
 
 .Error {
-    margin-top: 400px;
+    margin-top: 200px;
     text-align: center;
     color: white;
     font-size: 1.7rem;
@@ -50,10 +50,6 @@
     padding: 5% 10%;
 }
 
-h1 {
-    align-self: center;
-}
-
 input {
     width: 100%;
     min-height: 25px;
@@ -66,20 +62,14 @@ input {
     margin-bottom: 20px;
 }
 
-label {
+.label-checkout {
     text-transform: uppercase;
     font-size: 12px;
     letter-spacing: 2px;
 }
 
-h1 {
-    font-size: 24px;
-    line-height: 10px;
-    letter-spacing: 1px;
-}
-
-h1:nth-of-type(2) {
-    margin-top: 10%;
+.AddGames {
+    margin-bottom: 400px;
 }
 
 form {
@@ -108,45 +98,17 @@ button:focus {
     outline: none;
 }
 
-@media (max-width: 736px) {
-    .wrapper {
-        width: 100%;
-    }
+.inputShake:focus {
+    border: 1px solid rgb(201, 131, 2);
+}
 
-    .container {
-        width: 100%;
-    }
+.inputShake:invalid {
+    animation: shakeInvalid 400ms;
+    border: 1px solid red;
+}
 
-    .btns {
-        align-items: center;
-    }
-
-    form h1 {
-        text-align: center;
-    }
-
-    div {
-        align-items: center;
-        flex-direction: column;
-        width: 100%;
-        display: flex;
-    }
-
-    .name,
-    .address-info,
-    .cc-info {
-        flex-direction: column;
-        width: 100%;
-        justify-content: space-between;
-    }
-
-    .street,
-    .cc-num {
-        text-align: center;
-    }
-
-    input {
-        margin: 5px 0;
-        min-height: 30px;
-    }
+@keyframes shakeInvalid {
+    25% { transform: translateX(4px); }
+    50% { transform: translateX(-4px); }
+    75% { transform: translateX(4px); }
 }

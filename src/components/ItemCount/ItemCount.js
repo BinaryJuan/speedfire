@@ -2,7 +2,7 @@ import {useState} from 'react'
 import Button from '../Button/Button'
 import './ItemCount.css'
 
-const ItemCount = ({initial, stock, onAdd}) => {
+const ItemCount = ({ initial, stock, onAdd }) => {
     const [count, setCount] = useState(initial)
 
     const increment = () => {
@@ -24,7 +24,7 @@ const ItemCount = ({initial, stock, onAdd}) => {
                 <div>{count}</div>
                 <Button label={'+'} func={increment} type={'inc'} />
             </div>
-            <Button label={'Add to cart'} type={'AddCart'} func={() => {if (stock > 1 && stock >= count) {onAdd(count); setCount(initial)}}} />
+            <Button label={'Add to cart'} type={'AddCart'} func={() => {if (stock >= 1 && stock >= count) {onAdd(count); setCount(initial)}}} />
         </div>
     )
 }

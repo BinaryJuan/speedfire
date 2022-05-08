@@ -15,14 +15,15 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    width: 100%;
 }
 
 .Product {
     list-style: none;
     display: flex;
     height: 220px;
-    width: auto;
-    min-width: 600px;
+    width: 50vw;
+    min-width: 630px;
     justify-content: center;
     align-items: center;
     padding: 0px 70px;
@@ -50,7 +51,6 @@
 .ProductQuantity {
     color: rgba(255, 255, 255, 0.774);
     font-weight: 400;
-    margin-top: -15px;
 }
 
 .DeleteItem {
@@ -149,4 +149,39 @@
 
 .LinkGames:active {
     background-color: rgba(255, 255, 255, 0.815);
+}
+
+@media (max-width: 800px) {
+    .Product img {
+        display: none;
+    }
+
+    .ProductInfo {
+        margin: 10px 0 0 0;
+    }
+
+    .Product {
+        padding: 0;
+    }
+}
+
+@media (max-width: 650px) {
+    .Product {
+        flex-direction: column;
+        min-width: 100px;
+    }
+
+    .ProductInfo {
+        text-align: center;
+    }
+
+    .ProductTotalPrice {
+        margin: 0;
+    }
+}
+
+@media (max-width: 350px) {
+    .CartButtons {
+        flex-direction: column;
+    }
 }

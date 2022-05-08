@@ -1,15 +1,14 @@
 import './Cart.css'
-import { useContext } from 'react'
+import { useContext, useEffect } from 'react'
 import CartContextProvider from '../../context/CartContext'
 import { Link } from 'react-router-dom'
 
 const Cart = () => {
-    const { cart, removeItem, clearCart, addQuantity, reduceQuantity } = useContext(CartContextProvider)
-    const totalCartPrice = () => {
-        let total
-        total = cart.reduce((acc, value) => acc + value.finalProductPrice, 0)
-        return total.toFixed(2)
-    }
+    const { cart, removeItem, clearCart, addQuantity, reduceQuantity, totalCartPrice, totalPrice, setTotal } = useContext(CartContextProvider)
+
+    useEffect(() => {
+        setTotal(totalCartPrice())
+    })
 
     if (cart.length == 0) {
         return (
@@ -34,17 +33,17 @@ const Cart = () => {
                                         <h3 className='ProductName'>{prod.description}</h3>
                                         <h3 className='ProductQuantity'>x{prod.count}</h3>
                                     </div>
-                                    <div className='QuantityOperators' onClick={() => reduceQuantity(prod.id)}>-</div>
-                                    <div className='QuantityOperators' onClick={() => addQuantity(prod.id)}>+</div>
-                                    <h3 className='ProductTotalPrice'>${prod.finalProductPrice} {prod.currency}</h3>
+                                    <div className='QuantityOperators' onClick={() => {reduceQuantity(prod.id)}}>-</div>
+                                    <div className='QuantityOperators' onClick={() => {addQuantity(prod.id)}}>+</div>
+                                    <h3 className='ProductTotalPrice'>${prod.price} {prod.currency}</h3>
                                     <img src='https://images2.imgbox.com/91/16/0qxeHgQ4_o.png' onClick={() => removeItem(prod.id)} className='DeleteItem' alt='Delete' />
                                 </li>
                     })
                 }
             </ul>
-            <h3 className='FinalCartPrice'>Final price: ${totalCartPrice()} USD</h3>
+            <h3 className='FinalCartPrice'>Final price: ${totalPrice} USD</h3>
             <div className='CartButtons'>
-                <button className='Clear' onClick={() => clearCart()}>Clear cart</button>
+                <button className='Clear' onClick={() => clearCart(true)}>Clear cart</button>
                 <Link to='/checkout' className='CreateOrder'>Go to checkout</Link>
             </div>
         </div>

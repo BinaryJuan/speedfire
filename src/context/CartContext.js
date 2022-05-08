@@ -1,13 +1,15 @@
 import { createContext, useState } from 'react'
+import swal from 'sweetalert'
 
 const CartContext = createContext()
 
 export const CartContextProvider = ({children}) => {
     let [cart, addToCart] = useState([])
+    let [totalPrice, setTotal] = useState(0)
 
     const addItemToCart = (productAdd) => {
         let modified = false
-        cart = cart.map((prod) => {
+        addToCart(cart.map((prod) => {
             if (productAdd.id == prod.id) {
                 modified = true
                 return {...prod, count: prod.count + productAdd.count}
@@ -15,15 +17,35 @@ export const CartContextProvider = ({children}) => {
             else {
                 return prod
             }
-        })
+        }))
 
         if (!modified) {
             addToCart([...cart, productAdd])
         }
     }
 
-    const clearCart = () => {
-        addToCart([])
+    const clearCart = (notify) => {
+        if (notify) {
+            swal({
+                title: "Are you sure?",
+                text: "You are about to delete your cart!",
+                icon: "warning",
+                buttons: true,
+                dangerMode: true,
+            })
+            .then((willDelete) => {
+                if (willDelete) {
+                    addToCart([])
+                    swal("Cart deleted", {
+                        icon: "success",
+                        timer: 1000,
+                        buttons: false,
+                    })
+                }
+        })
+        } else {
+            addToCart([])
+        }
     }
 
     const removeItem = (id) => {
@@ -32,12 +54,12 @@ export const CartContextProvider = ({children}) => {
     }
 
     const cartQuantity = () => {
-        let totalItems = cart.length
+        let totalItems = cart.reduce((acc, value) => acc + value.count, 0)
         return totalItems
     }
 
     const addQuantity = (id) => {
-        let newCart = cart.map((prod) => {
+        addToCart(cart.map((prod) => {
             if (prod.id == id) {
                 if (prod.count + 1 <= prod.stock) {
                     return {...prod, count: prod.count + 1}
@@ -48,8 +70,8 @@ export const CartContextProvider = ({children}) => {
             } else {
                 return prod
             }
-        })
-        addToCart(newCart)
+        }))
+        setTotal(totalCartPrice())
     }
 
     const reduceQuantity = (id) => {
@@ -69,10 +91,18 @@ export const CartContextProvider = ({children}) => {
         if (!removed) {
             addToCart(newCart)
         }
+        setTotal(totalCartPrice())
+    }
+
+    const totalCartPrice = () => {
+        let total
+        total = cart.reduce((acc, value) => acc + value.price * value.count, 0)
+        total = total.toFixed(2)
+        return total
     }
 
     return (
-        <CartContext.Provider value={{cart, addItemToCart, cartQuantity, clearCart, removeItem, addQuantity, reduceQuantity}}>
+        <CartContext.Provider value={{cart, addItemToCart, cartQuantity, clearCart, removeItem, addQuantity, reduceQuantity, totalCartPrice, totalPrice, setTotal}}>
             {children}
         </CartContext.Provider>
     )
