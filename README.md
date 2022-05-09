@@ -45,6 +45,12 @@ Usada como base de datos. Permite importar los productos, las categorías, y alm
 - Sweet alert
 - Toastify
 
+## Organización de las carpetas
+Dentro de la carpeta root (speedfire) se encuentran dos carpetas en donde se desarrolló la mayor parte del código:
+
+- { /public/media } en donde se encuentran los elementos multimedia del proyecto
+- { src } dentro de esta se encuentra la carpeta { components }, que contiene todos los componentes utilizados en el proyecto, la carpeta { context } para controlar el context dentro de la aplicación y mejorar la implementación del carrito. Finalmente, está la carpeta { services }, que es donde se guardan los datos necesarios para el funcionamiento de Firebase.
+
 ## Instalación :electric_plug:
 Para la instalación de este proyecto se deberán seguir los pasos a continuación:
 
@@ -91,9 +97,11 @@ Ya una vez en el carrito se podrá modificar tanto la cantidad de cada producto,
 Una vez ingresados los datos se debe tocar el botón de finalizar compra y, en caso de haber stock, se generará una orden con los datos ingresados en el formulario.
 
 **Ejemplo de orden generada luego de una compra**
+
 ![Orden](https://i.ibb.co/cXvtrGq/order.png)
 
 **Video mostrando el proceso completo de compra:**
+
 ![Compra](https://i.ibb.co/tbgBW7X/compra.gif)
 
 
