@@ -94,8 +94,7 @@ Una vez ingresados los datos se debe tocar el botón de finalizar compra y, en c
 ![Orden](https://i.ibb.co/cXvtrGq/order.png)
 
 **Video mostrando el proceso completo de compra:**
-
-https://ibb.co/1fLGjq9
+![Compra](https://i.ibb.co/tbgBW7X/compra.gif)
 
 
 ## Ejecución :rocket:
