@@ -24,7 +24,7 @@ const Checkout = () => {
 
     const handleOnChange = (e) => {
         e.preventDefault()
-        objOrder.buyer = {...objOrder.buyer, [e.target.name]: e.target.value}
+        setUser({...objOrder, buyer: {...objOrder.buyer, [e.target.name]: e.target.value}})
     }
 
     const handleSubmit = (e) => {

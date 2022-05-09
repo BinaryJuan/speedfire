@@ -21,7 +21,7 @@ const ItemDetail = ({ img, description, id, category, price, currency }) => {
     return (
         <div className='DetailCard'>
             <div>
-                <img src={img} className='DetailImg' />
+                <img src={img} className='DetailImg' alt='item' />
             </div>
             <div className='DetailTextContainer'>
                 <ul>

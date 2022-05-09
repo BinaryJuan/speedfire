@@ -13,7 +13,7 @@ const ItemListContainer = (props) => {
     const { categoryID } = useParams()
 
     useEffect(() => {
-        const collectionRef = categoryID != 'all' ? query(collection(firestoreDb, 'products'), where('category', '==', categoryID)) : collection(firestoreDb, 'products')
+        const collectionRef = categoryID !== 'all' ? query(collection(firestoreDb, 'products'), where('category', '==', categoryID)) : collection(firestoreDb, 'products')
     
         getDocs(collectionRef)
         .then(response => {

@@ -10,7 +10,7 @@ export const CartContextProvider = ({children}) => {
     const addItemToCart = (productAdd) => {
         let modified = false
         addToCart(cart.map((prod) => {
-            if (productAdd.id == prod.id) {
+            if (productAdd.id === prod.id) {
                 modified = true
                 return {...prod, count: prod.count + productAdd.count}
             }
@@ -49,7 +49,7 @@ export const CartContextProvider = ({children}) => {
     }
 
     const removeItem = (id) => {
-        let newCart = cart.filter(prod => prod.id != id)
+        let newCart = cart.filter(prod => prod.id !== id)
         addToCart(newCart)
     }
 
@@ -60,7 +60,7 @@ export const CartContextProvider = ({children}) => {
 
     const addQuantity = (id) => {
         addToCart(cart.map((prod) => {
-            if (prod.id == id) {
+            if (prod.id === id) {
                 if (prod.count + 1 <= prod.stock) {
                     return {...prod, count: prod.count + 1}
                 }
@@ -77,7 +77,7 @@ export const CartContextProvider = ({children}) => {
     const reduceQuantity = (id) => {
         let removed = false
         let newCart = cart.map((prod) => {
-            if (prod.id == id) {
+            if (prod.id === id) {
                 if (prod.count - 1 === 0) {
                     removeItem(prod.id)
                     removed = true

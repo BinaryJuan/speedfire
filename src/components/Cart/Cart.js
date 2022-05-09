@@ -10,7 +10,7 @@ const Cart = () => {
         setTotal(totalCartPrice())
     })
 
-    if (cart.length == 0) {
+    if (cart.length === 0) {
         return (
             <div>
                 <h2 className='TitleCart'>No added products</h2>

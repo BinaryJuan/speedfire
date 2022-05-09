@@ -1,16 +1,14 @@
 import ItemCount from '../ItemCount/ItemCount'
 import './Item.css'
 import { Link } from 'react-router-dom'
-import { useState, useContext } from 'react'
+import { useContext } from 'react'
 import CartContext from '../../context/CartContext'
 import notifyAdd from '../Notification/Notification'
 
 const Item = ({img, description, price, currency, id}) => {
     const {addItemToCart} = useContext(CartContext)
-    const [quantity, setQuantity] = useState(0)
 
     const onAddItem = (count) => {
-        setQuantity(count)
         const productIn = {
             id, description, currency, price, count, img, stock: 20
         }
