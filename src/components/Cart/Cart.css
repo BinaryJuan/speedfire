@@ -69,7 +69,7 @@
     margin: 10px;
     font-size: 1.5rem;
     background-color: black;
-    user-select: none;
+    user-select: none; 
 }
 
 .QuantityOperators:hover {
