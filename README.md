@@ -3,15 +3,17 @@
 - **Autor**: Dante Terranova
 - **Año**: 2022
 
-## Índice
-[TOC]
-
 ## Introducción :video_game:
 Este proyecto buscó concretar un e-commerce convencional de videojuegos, que cuenta con un listado filtrado por categoría, dando la posibilidad de ver el detalle de cada producto. Además de esto, el e-commerce provee la posibilidad de interactuar con los productos, ya sea para agregarlos al carrito, modificar su cantidad al agregar y una vez agregados, eliminarlos del carrito, entre otras.
 
 ## Tecnologías usadas :computer:
 **Principales**
-	React, Node, ReactRouter, Firebase
+<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/javascript-colored.svg" width="36" height="36" alt="Javascript" /></a>
+<a href="https://reactjs.org/" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/react-colored.svg" width="36" height="36" alt="React" /></a>
+<a href="https://developer.mozilla.org/en-US/docs/Glossary/HTML5" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/html5-colored.svg" width="36" height="36" alt="HTML5" /></a>
+<a href="https://www.w3.org/TR/CSS/#css" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/css3-colored.svg" width="36" height="36" alt="CSS3" /></a>
+<a href="https://nodejs.org/en/" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/nodejs-colored.svg" width="36" height="36" alt="NodeJS" /></a>
+<a href="https://firebase.google.com/" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/firebase-colored.svg" width="36" height="36" alt="Firebase" /></a>
 
 ## Implementación de las tecnologías :mag_right:
 #### React
@@ -112,3 +114,7 @@ Una vez ingresados los datos se debe tocar el botón de finalizar compra y, en c
 	A través de este comando generaremos un servidor virtual local para simular
 	el e-commerce. Automáticamente se debería abrir una ventana con la siguiente URL
 	http://localhost:3000/.
+
+## Página hosteada
+Desde este link se podrá acceder a la página hosteada desde Vercel:
+https://speedfire.vercel.app/
