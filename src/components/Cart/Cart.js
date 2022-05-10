@@ -8,7 +8,7 @@ const Cart = () => {
 
     useEffect(() => {
         setTotal(totalCartPrice())
-    })
+    }, [cart])
 
     if (cart.length === 0) {
         return (
