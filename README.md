@@ -7,7 +7,6 @@
 Este proyecto buscó concretar un e-commerce convencional de videojuegos, que cuenta con un listado filtrado por categoría, dando la posibilidad de ver el detalle de cada producto. Además de esto, el e-commerce provee la posibilidad de interactuar con los productos, ya sea para agregarlos al carrito, modificar su cantidad al agregar y una vez agregados, eliminarlos del carrito, entre otras.
 
 ## Tecnologías usadas :computer:
-**Principales**
 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/javascript-colored.svg" width="36" height="36" alt="Javascript" /></a>
 <a href="https://reactjs.org/" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/react-colored.svg" width="36" height="36" alt="React" /></a>
 <a href="https://developer.mozilla.org/en-US/docs/Glossary/HTML5" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/html5-colored.svg" width="36" height="36" alt="HTML5" /></a>
